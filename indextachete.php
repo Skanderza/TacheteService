@@ -16,25 +16,24 @@
       
             <legend>Choisissez votre demande :</legend>
 <br>
-            
-            <input type="radio" name="lieu" value="Saint Denis"> Visualiser quel employé a passé quelles commandes et à quels clients
-            <br><br>
-            <input type="radio" name="lieu" value="Saint Denis"> Modifier les prix des produits
-            <br><br>
-            <input type="radio" name="lieu" value="Saint Denis">Affichez les sociétés clients qui ont commandé un produit précis
-            <br><br>
-            <input type="radio" name="lieu" value="Saint Denis">Affichez le nom, prénom et la société cliente pour les employés qui ont effectué une vente pour les clients par ville
-            <br><br>
-            <input type="radio" name="lieu" value="Reste du monde">Afficher les commandes et les produits commandés pendant une période de temps
+                     <a href = "recherche1.php">Visualiser quel employé a passé quelles commandes et à quels clients </a>
+                     <br/>
+                     <a href = "modifprix.php">Modifier le prix des produits </a>
+                     <br/>
+                     <a href = "produitSociete.php">Affichez les sociétés clients qui ont commandé un produit précis </a>
+                     <br/>                    
+                     <a href = "rechercheVille.php">Affichez le nom, prénom et la société cliente pour les employés qui ont effectué une vente pour les clients par ville </a>
+                     <br/>
+                     <a href = "recherchedate.php">Afficher les commandes et les produits commandés pendant une période de temps </a>
+           
         </fieldset>
         <br>
     
-        <input type="submit" name="valider" value=" Envoyer "> &nbsp&nbsp&nbsp
-        <input type="reset" value="Annuler">
+     
     </form>
 </fieldset>
 <br><br>
 
-<footer> Formulaire réalisé dans le cadre du TP 2 de la formation de développeurs intégrateurs et codeurs web</footer>
+<footer>---------------------------------------------------------------------------------TACHETE SERVICES</footer>
 </body>
 </html>
