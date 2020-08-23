@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(isset($_SESSION['pseudo']) && isset($_SESSION['id_membre'])){
+    $id_membre = $_SESSION['id_membre'];
+    $nom = $_SESSION['nom'];
+    $prenom = $_SESSION['prenom'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,8 +17,12 @@
 </head>
 
 <body>
-<header></header>
-<h1>Saisissez l'identifiant du produit</h1>
+
+<h1> TACHETE SERVICES</h1>
+<?php
+echo "Bienvenue ".$nom." ".$prenom." ";
+?>
+<a href="deconnexiontachete.php">Déconnexion</a>
   <hr>
   <form method = "post" action="modifprix.php">
    <fieldset>
@@ -69,3 +83,9 @@ else {echo "Veuillez saisir l'identifiant du produit ";}
 
 </body>
 </html>
+<?php
+}
+    else {echo "Vous n'êtes pas autorisé à visiter cette page <br/>";
+          echo "<a href = \"connexionTachete.php\">Merci de vous connecter</a> ";
+          }
+    ?>

@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION['pseudo']) && isset($_SESSION['id_membre'])){
+    $id_membre = $_SESSION['id_membre'];
+    $nom = $_SESSION['nom'];
+    $prenom = $_SESSION['prenom'];
+
+?>
 
 
 <!DOCTYPE html>
@@ -11,6 +19,10 @@
 
   <header></header>
   <h1>La liste des commandes et des produits</h1>
+  <?php
+echo "Bienvenue ".$nom." ".$prenom." ";
+?>
+<a href="deconnexiontachete.php">Déconnexion</a>
   <hr>
   <form method = "post" action="recherchedate.php">
    <fieldset>
@@ -96,3 +108,10 @@ else {
   
   </body>
 </html>
+
+<?php
+}
+    else {echo "Vous n'êtes pas autorisé à visiter cette page <br/>";
+          echo "<a href = \"connexionTachete.php\">Merci de vous connecter</a> ";
+          }
+    ?>
